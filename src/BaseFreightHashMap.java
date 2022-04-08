@@ -13,24 +13,31 @@ public class BaseFreightHashMap<K, V> implements FreightMap<String, Freight> {
 
     public boolean put(String key, Freight value) {
         if(isNull(key) || isNull(value)) {
-            return false;}
+            return false;
+        }
         map.put(key, value);
         return true;
     }
 
     public boolean remove(String key) {
-        if(isNull(key)) { return false; }
+        if(isNull(key)) {
+            return false;
+        }
         map.remove(key);
         return true;
     }
 
     public boolean containsKey(String key) {
-        if(isNull(key)) { return false; }
+        if(isNull(key)) {
+            return false;
+        }
         return map.containsKey(key);
     }
 
     public Freight get(String key) {
-        if(isNull(key)) { return null; }
+        if(isNull(key)) {
+            return null;
+        }
         return map.get(key);
     }
 
